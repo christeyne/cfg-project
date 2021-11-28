@@ -1,3 +1,11 @@
 /* so i think we just need to make sure that we give the class names enough specificity
 so we know which classes are for the story pages vs index vs about
-and we can separate them using comments like this as well just so we don't accidentally mix things up? */
+and we can separate them using comments like this as well just so we don't accidentally mix things up? 
+
+for class names we could use
+index: "main-" 
+story pages: "page-"
+about: "about-"
+
+as prefixes for the class names for the different elements on each page just so we remember and can differentiate?
+*/
