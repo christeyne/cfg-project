@@ -1,3 +1,215 @@
 /* so i think we just need to make sure that we give the class names enough specificity
-so we know which classes are for the story pages vs index vs about
+so we know which classes are unique to the story pages vs index vs about
 and we can separate them using comments like this as well just so we don't accidentally mix things up? */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lexend, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* NAV  */
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3vh 3vw;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    z-index: 19;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li {
+    list-style: none;
+    margin-left: 20px;
+    font-size: 1em;
+}
+
+nav ul li a, a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    padding: 6px 15px;
+    color: black;
+    border-radius: 20px;;
+}
+nav a:hover {
+    opacity: 70%;
+    background-color: #000;
+    font-style: italic;
+    color: #fff;
+}
+
+/*STICKY NAV */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* FOOTER */
+#footer {
+    width: 100%;
+    height: 4vh;
+    padding: 6px 20px;
+    background:#000;
+    opacity: 60%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+    font-family: Playfair, serif;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: end;
+}
+
+/* MAIN PAGE */
+#non-parallax {
+    display: none;
+}
+/ *MEDIA QUERY* /
+@media (max-width: 600px){
+    #parallax {
+        display:none;
+    }
+    #non-parallax {
+        display: block;
+    }
+}
+
+/* PARALLAX ELEMENTS */
+    .parallax {
+        position: relative;
+        width: 100%;
+        min-height: 120vh;
+        padding: 10vh 10vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .parallax::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 80vh;
+        background: linear-gradient(to top, #23241E, transparent);
+        z-index: 10;
+        pointer-events: none;
+    }
+    .parallax img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+    }
+    #forest {
+        z-index: 5;
+    } /* to keep this in front of the title text */
+
+/* FOR SMALL SCREENS - CAN ADJUST/DELETE THIS WITH MEDIA QUERY ABOVE */
+    .non-parallax {
+        min-height: 100vh;
+        width: 100%;
+    }
+    .non-parallax img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+
+/* TITLE TEXT */
+/* parallax */
+.title-text {
+    position: absolute;
+    top: 40vh;
+    width: 100%;
+    font-size: 1.3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    z-index: 4;
+}
+/* static for small screens */
+.static-text {
+    position: absolute;
+    top: 40vh;
+    width: 100%;
+    font-size: 2.4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    z-index: 4;
+}
+.title {
+    color: #000;
+    white-space: nowrap;
+    font-size: 4em;
+    font-weight: normal;
+    font-style: oblique;
+}
+.subtitle {
+    color: black;
+    white-space:nowrap;
+    font-family: Georgia,serif;
+    font-size: 2.4em;
+    font-weight: normal;  
+}
+.button {
+    font-family: Lexend, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-variant: small-caps;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    width: min-content;
+    white-space: nowrap;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background: #fff;
+    opacity: 70%;
+}
+
+
+/* CONTENT  */
+.content {
+    position: absolute;
+    background-image: url(img/forest-extended-gradient.png);
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    padding: 10vh 10vw;
+    z-index: 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content p {
+    font-family: Lexend, sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #fff;
+}
