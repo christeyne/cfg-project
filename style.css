@@ -1,11 +1,325 @@
-/* so i think we just need to make sure that we give the class names enough specificity
-so we know which classes are for the story pages vs index vs about
-and we can separate them using comments like this as well just so we don't accidentally mix things up? 
 
-for class names we could use
-index: "main-" 
-story pages: "page-"
-about: "about-"
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lexend, sans-serif;
+    scroll-behavior: smooth;
+}
 
-as prefixes for the class names for the different elements on each page just so we remember and can differentiate?
-*/
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* NAV  */
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: min-content;
+    padding: 3vh 2vw;
+    z-index: 11;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1vh;
+}
+nav ul li {
+    list-style: none;
+    margin-left: 20px;
+    font-size: 1em;
+}
+
+nav ul li a, a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    padding: 6px 15px;
+    color: black;
+    border-radius: 20px;;
+}
+nav a:hover {
+    opacity: 70%;
+    background-color: #000;
+    font-style: italic;
+    color: #fff;
+}
+
+/*STICKY NAV */
+
+.sticky {
+    position: fixed;
+    top: 0;
+}
+
+
+
+/* MAIN PAGE */
+#non-parallax {
+    display: none;
+}
+/* MEDIA QUERY */
+@media (max-width: 600px){
+    #parallax {
+        display:none;
+    }
+    #navbar {
+        position: absolute;
+    }
+    #non-parallax {
+        display: block;
+    }
+}
+/* PARALLAX ELEMENTS */
+    .parallax {
+        position: relative;
+        top: 0;
+        width: 100%;
+        min-height: 120vh;
+        padding: 10vh 10vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .parallax::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 80vh;
+        background: linear-gradient(to top, #23241E, transparent);
+        z-index: 10;
+        pointer-events: none;
+    }
+    .parallax img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+    }
+    #forest {
+        z-index: 5;
+    }
+
+
+/* FOR SMALL SCREENS - CAN ADJUST/DELETE THIS WITH MEDIA QUERY ABOVE */
+
+    .non-parallax {
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .non-parallax img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+    }
+
+/* TITLE TEXT */
+
+/* parallax */
+.title-text {
+    position: absolute;
+    top: 40vh;
+    width: 100%;
+    font-size: 1.3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    z-index: 4;
+}
+/* static for small screens */
+.static-text {
+    position: absolute;
+    top: 40vh;
+    width: 100%;
+    font-size: 2.4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    z-index: 4;
+}
+.title {
+    color: #000;
+    white-space: nowrap;
+    font-size: 4em;
+    font-weight: normal;
+    font-style: oblique;
+}
+.subtitle {
+    color: black;
+    white-space:nowrap;
+    font-family: Georgia,serif;
+    font-size: 2.4em;
+    font-weight: normal;  
+}
+.button {
+    font-family: Lexend, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-variant: small-caps;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    width: min-content;
+    white-space: nowrap;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background: #fff;
+    opacity: 70%;
+}
+
+
+/* CONTENT  */
+
+.content {
+    position: absolute;
+    background-image: url(img/forest-extended-gradient.png);
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    padding: 10vh 10vw;
+    padding-right: 15vw;
+    padding-bottom: 30vh;
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+    font-size: 2vh;
+    text-align: left;
+    color: #fff;
+    background-attachment: fixed;
+}
+h2 {
+    font-family: Playfair Display, serif;
+    font-size: 4em;
+    opacity: 60%;
+}
+h3 {
+    font-family: Playfair Display, serif;
+    font-weight: bold;
+    font-size: 3.5em;
+    color: #fff;
+    opacity: 50%;
+}
+p {
+    font-family: Lexend, sans-serif;
+    font-weight: lighter;
+    font-size: 1.1em;
+}
+
+p.intro-text {
+    font-weight: bold;
+}
+
+#add-below {
+    position: static;
+}
+
+/* FOOTER FOR MAIN PAGE */
+p.footer {
+    width: 100%;
+    height: 4vh;
+    padding: 6px 20px;
+    background:#000;
+    opacity: 60%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 0;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: end;
+}
+
+/* FOOTER FOR OTHER PAGES */
+footer {
+    width: 100%;
+    max-height: min-content;
+    padding: 5px 20px;
+    background:#000;
+    opacity: 60%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: end;
+    z-index: 100;
+    color: #fff;
+}
+
+p footer {
+    margin-bottom: 0;
+}
+
+/* EPILOGUE STYLING */
+.epilogue {
+    min-height: 100vh;
+    width: 100%;
+    padding: 10vw 10vh;
+    padding-bottom: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3vh;
+    font-size: 2vh;
+    text-align: left;
+}
+
+.epilogue div {
+    display: flex;
+    height: min-content;
+    align-items: center;
+    gap: 2vw;
+}
+
+.epilogue h2 {
+    color: #000;
+}
+
+.audio-button-container img {
+    height: 3.5em;
+    position: absolute;
+    opacity: 60%;
+}
+
+#mute-button {
+    visibility: hidden;
+}
+
+/* BACKGROUNDS FOR DIFFERENT ENDINGS */
+
+#epi-12a {
+    background-image: url(img/pexels-kaboompics-com-6165.jpg);
+    background-size: cover;
+}
+
+#epi-12b {
+    background-image: url(img/pexels-nadezhda-moryak-6063619.jpg);
+    background-size: cover;
+}
+
+#epi-9ba {
+    background-image: url(img/pexels-jimmy-chan-1309902.jpg);
+    background-size: cover;
+}
+
+#epi-9ba div {
+    background: #000;
+    opacity: 90%;
+    width: max-content;
+}
