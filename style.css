@@ -16,19 +16,18 @@ body {
 nav {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    padding: 3vh 3vw;
-    display: flex;
-    justify-content:flex-end;
-    align-items: center;
-    z-index: 19;
+    right: 0;
+    width: min-content;
+    padding: 3vh 2vw;
+    z-index: 11;
 }
 
 nav ul {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    gap: 1vh;
 }
 nav ul li {
     list-style: none;
@@ -55,7 +54,6 @@ nav a:hover {
 .sticky {
     position: fixed;
     top: 0;
-    width: 100%;
 }
 
 
@@ -69,6 +67,9 @@ nav a:hover {
     #parallax {
         display:none;
     }
+    #navbar {
+        position: absolute;
+    }
     #non-parallax {
         display: block;
     }
@@ -76,6 +77,7 @@ nav a:hover {
 /* PARALLAX ELEMENTS */
     .parallax {
         position: relative;
+        top: 0;
         width: 100%;
         min-height: 120vh;
         padding: 10vh 10vw;
@@ -187,6 +189,7 @@ nav a:hover {
     min-height: 100vh;
     width: 100%;
     padding: 10vh 10vw;
+    padding-right: 15vw;
     padding-bottom: 30vh;
     z-index: 7;
     display: flex;
@@ -196,30 +199,33 @@ nav a:hover {
     gap: 3vh;
     font-size: 2vh;
     text-align: left;
+    color: #fff;
+    background-attachment: fixed;
 }
-.content h2 {
+h2 {
     font-family: Playfair Display, serif;
     font-size: 4em;
-    color: #fff;
-    opacity: 50%;
+    opacity: 60%;
 }
-.content h3 {
+h3 {
     font-family: Playfair Display, serif;
     font-weight: bold;
     font-size: 3.5em;
     color: #fff;
     opacity: 50%;
 }
-.content p {
+p {
     font-family: Lexend, sans-serif;
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 1.1em;
-    color: #fff;
-    margin-bottom: 3vh
 }
 
-p.page-text {
-    font-weight: lighter;
+p.intro-text {
+    font-weight: bold;
+}
+
+#add-below {
+    position: static;
 }
 
 /* FOOTER FOR MAIN PAGE */
@@ -241,17 +247,78 @@ p.footer {
 /* FOOTER FOR OTHER PAGES */
 footer {
     width: 100%;
-    height: 4vh;
-    padding: 6px 20px;
+    max-height: min-content;
+    padding: 5px 20px;
     background:#000;
     opacity: 60%;
     position: fixed;
     bottom: 0;
     right: 0;
-    margin-bottom: 0;
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: bold;
     text-align: end;
     z-index: 100;
     color: #fff;
+}
+
+p footer {
+    margin-bottom: 0;
+}
+
+/* EPILOGUE STYLING */
+.epilogue {
+    min-height: 100vh;
+    width: 100%;
+    padding: 10vw 10vh;
+    padding-bottom: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3vh;
+    font-size: 2vh;
+    text-align: left;
+}
+
+.epilogue div {
+    display: flex;
+    height: min-content;
+    align-items: center;
+    gap: 2vw;
+}
+
+.epilogue h2 {
+    color: #000;
+}
+
+.audio-button-container img {
+    height: 3.5em;
+    position: absolute;
+    opacity: 60%;
+}
+
+#mute-button {
+    visibility: hidden;
+}
+
+/* BACKGROUNDS FOR DIFFERENT ENDINGS */
+
+#epi-12a {
+    background-image: url(img/pexels-kaboompics-com-6165.jpg);
+    background-size: cover;
+}
+
+#epi-12b {
+    background-image: url(img/pexels-nadezhda-moryak-6063619.jpg);
+    background-size: cover;
+}
+
+#epi-9ba {
+    background-image: url(img/pexels-jimmy-chan-1309902.jpg);
+    background-size: cover;
+}
+
+#epi-9ba div {
+    background: #000;
+    opacity: 90%;
+    width: max-content;
 }
