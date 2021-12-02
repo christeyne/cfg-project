@@ -1,3 +1,6 @@
+/* note: need to adjust z-index values later so the layering still works
+but that certain elements aren't a ridiculous number like 1000 just to keep them on top lol?*/
+
 *{
     margin: 0;
     padding: 0;
@@ -20,7 +23,6 @@ nav {
     width: min-content;
     padding: 3vh 2vw;
     z-index: 11;
-    font-size: 2vh;
 }
 
 nav ul {
@@ -33,7 +35,6 @@ nav ul {
 nav ul li {
     list-style: none;
     margin-left: 20px;
-    font-size: 1em;
 }
 
 nav ul li a:hover {
@@ -43,11 +44,13 @@ nav ul li a:hover {
     color: #fff;
 }
 
-a, a:visited {
+nav a, a:visited {
+    font-size: 2vw;
+    font-family: Playfair Display, serif;
     font-weight: bold;
     text-decoration: none;
     padding: 6px 15px;
-    color: black;
+    color: #000;
     border-radius: 20px;;
 }
 
@@ -59,8 +62,7 @@ a, a:visited {
 }
 
 
-
-/* MAIN PAGE */
+/* LANDING PAGE */
 #non-parallax {
     display: none;
 }
@@ -154,6 +156,7 @@ a, a:visited {
 .title {
     color: #000;
     white-space: nowrap;
+    font-family: Lexend, sans-serif;
     font-size: 4em;
     font-weight: normal;
     font-style: oblique;
@@ -161,10 +164,12 @@ a, a:visited {
 .subtitle {
     color: black;
     white-space:nowrap;
-    font-family: Georgia,serif;
+    font-family: Playfair Display,serif;
     font-size: 2.4em;
     font-weight: normal;  
 }
+
+/* BUTTON ELEMENTS  */
 .button {
     font-family: Lexend, sans-serif;
     font-weight: bold;
@@ -183,6 +188,11 @@ a, a:visited {
 
 .button:hover{
     opacity: 90%;
+}
+
+a, a:visited {
+    font-family: Lexend, sans-serif;
+    text-decoration: none;
 }
 
 
@@ -209,7 +219,7 @@ a, a:visited {
     background-attachment: fixed;
 }
 
-/* no fixed bg attachment for index */
+/* no fixed bg attachment for index.html/landing page */
 #content {
     background-attachment: scroll;
 }
@@ -366,7 +376,6 @@ p footer {
     width: 100%;
     padding: 10vh 10vw;
     padding-bottom: 30vh;
-    z-index: 7;
     display: flex;
     flex-direction: column;
     justify-content: center;
