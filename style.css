@@ -35,7 +35,7 @@ nav ul li {
     font-size: 1em;
 }
 
-nav ul li:hover {
+nav ul li a:hover {
     opacity: 70%;
     background-color: #000;
     font-style: italic;
