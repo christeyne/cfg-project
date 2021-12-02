@@ -387,7 +387,7 @@ p footer {
 
 .about p {
     color: #fff;
-    margin-bottom: 3vh  
+    margin-bottom: 3vh;
 }
 
 .project-info a {
@@ -395,6 +395,8 @@ p footer {
     padding: 0vh 0.5vw;
     border-radius: 20px;
     background-color: #000;
+    opacity: 70%;
+
 }
 
 .about a:hover{
@@ -405,7 +407,6 @@ p footer {
 
 /* TABLE FORMATTING  */
 table, td, th {
-    /* border: 2px solid black; */
     color: #fff;
     text-align: center;
 }
@@ -420,8 +421,11 @@ th {
     border-radius: 50%;
 }
 
-td img, a {
+td img {
     height: 5vh;
     border-radius: 10px;
-    opacity: 90%;
+}
+
+td a {
+    opacity: 80%;
 }
