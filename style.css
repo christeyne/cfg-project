@@ -44,7 +44,7 @@ nav ul li a:hover {
     color: #fff;
 }
 
-nav a, a:visited {
+nav a, nav a:visited {
     font-size: 2vw;
     font-family: Playfair Display, serif;
     font-weight: bold;
@@ -409,6 +409,7 @@ p footer {
 table, td, th {
     color: #fff;
     text-align: center;
+    padding: 5px;
 }
 
 th {
@@ -419,6 +420,10 @@ th {
 .photo img{
     height: 20vh;
     border-radius: 50%;
+}
+
+td {
+    width: 50%;
 }
 
 td img {
