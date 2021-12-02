@@ -323,3 +323,35 @@ p footer {
     opacity: 90%;
     width: max-content;
 }
+
+/* ABOUT PAGE */
+
+.about {
+   background-image: url(img/tree.jpeg);
+   background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    padding: 10vh 10vw;
+    padding-bottom: 30vh;
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+}
+
+.about h2 {
+    font-family: Playfair Display, serif;
+    font-size: 4em;
+    color: #fff;
+    opacity: 50%;
+}
+
+.about p {
+    font-family: Lexend, sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #fff;
+    margin-bottom: 3vh  
+}
