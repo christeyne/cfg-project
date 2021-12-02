@@ -35,18 +35,19 @@ nav ul li {
     font-size: 1em;
 }
 
-nav ul li a, a:visited {
+nav ul li:hover {
+    opacity: 70%;
+    background-color: #000;
+    font-style: italic;
+    color: #fff;
+}
+
+a, a:visited {
     font-weight: bold;
     text-decoration: none;
     padding: 6px 15px;
     color: black;
     border-radius: 20px;;
-}
-nav a:hover {
-    opacity: 70%;
-    background-color: #000;
-    font-style: italic;
-    color: #fff;
 }
 
 /*STICKY NAV */
@@ -177,6 +178,10 @@ nav a:hover {
     border-radius: 20px;
     background: #fff;
     opacity: 70%;
+}
+
+.button:hover{
+    opacity: 90%;
 }
 
 
