@@ -390,26 +390,27 @@ p footer {
     margin-bottom: 3vh  
 }
 
-.about a {
-    background-color: #000;
+.project-info a {
     color: #fff;
     padding: 0vh 0.5vw;
     border-radius: 20px;
-    opacity: 70%;
+    background-color: #000;
 }
 
 .about a:hover{
-    opacity: 90%;
+    opacity: 100%;
     color: #D36135;
     /* link colour option #7CAE7A */
 }
 
-table {
-    width: 100%;
+/* TABLE FORMATTING  */
+table, td, th {
+    /* border: 2px solid black; */
+    color: #fff;
+    text-align: center;
 }
 
 th {
-    color: #fff;
     font-family: Playfair Display, serif;
     font-size: 2em;
 }
@@ -419,6 +420,8 @@ th {
     border-radius: 50%;
 }
 
-table img {
+td img, a {
     height: 5vh;
+    border-radius: 10px;
+    opacity: 90%;
 }
