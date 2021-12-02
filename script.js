@@ -68,7 +68,8 @@ function parallaxOn(){
 // AUDIO TRIGGER
 
 const epilogue = document.getElementsByClassName('epilogue')[0];
-const audio = document.getElementById('audio');
+const audio = document.getElementsByClassName('audio')[0];
+const audioNoLoop = document.getElementById('no-loop');
 
 window.addEventListener('scroll', function audioTrigger(){
     let valueY = window.pageYOffset;
@@ -78,12 +79,11 @@ window.addEventListener('scroll', function audioTrigger(){
         audio.pause() == true;
     };
     audio.loop = true;
+    audioNoLoop.loop = false;
     // check for height values
     // console.log('y val:' + valueY);
     // console.log('epilogue: ' + epilogue.scrollHeight)
 });
-
-
 
 // MUTE BUTTON??
 
