@@ -158,7 +158,7 @@ nav a, a:visited {
     white-space: nowrap;
     font-family: Lexend, sans-serif;
     font-size: 4em;
-    font-weight: normal;
+    font-weight: bold;
     font-style: oblique;
 }
 .subtitle {
@@ -166,7 +166,7 @@ nav a, a:visited {
     white-space:nowrap;
     font-family: Playfair Display,serif;
     font-size: 2.4em;
-    font-weight: normal;  
+    font-weight: lighter;  
 }
 
 /* BUTTON ELEMENTS  */
@@ -193,6 +193,7 @@ nav a, a:visited {
 a, a:visited {
     font-family: Lexend, sans-serif;
     text-decoration: none;
+    color: #000;
 }
 
 
@@ -231,13 +232,11 @@ h2 {
 }
 h3 {
     font-family: Playfair Display, serif;
-    font-weight: bold;
     font-size: 3.5em;
     color: #fff;
     opacity: 70%;
 }
 p {
-    font-family: Lexend, sans-serif;
     font-weight: lighter;
     font-size: 1.1em;
 }
@@ -254,7 +253,7 @@ p.intro-text {
 p.footer {
     width: 100%;
     height: 4vh;
-    padding: 6px 20px;
+    padding: 5px 20px;
     background:#000;
     opacity: 60%;
     position: absolute;
@@ -291,7 +290,7 @@ p footer {
 .epilogue {
     min-height: 100vh;
     width: 100%;
-    padding: 10vw 10vh;
+    padding: 10vh 10vw;
     padding-bottom: 20vh;
     display: flex;
     flex-flow: column wrap;
@@ -355,7 +354,7 @@ p footer {
     background: #55574b;
     width: fit-content;
     opacity: 80%;
-    padding: 1vw 1vh;
+    padding: 1vh 1vw;
     border-radius: 10px;
     color: #fff;
 }
@@ -363,7 +362,7 @@ p footer {
     background: #000;
     width:fit-content;
     opacity: 80%;
-    padding: 1vw 1vh;
+    padding: 1vh 1vw;
     border-radius: 10px;
 }
 
@@ -379,21 +378,47 @@ p footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     gap: 3vh;
 }
 
 .about h2 {
-    font-family: Playfair Display, serif;
-    font-size: 4em;
     color: #fff;
-    opacity: 50%;
 }
 
 .about p {
-    font-family: Lexend, sans-serif;
-    font-weight: bold;
-    font-size: 1.1em;
     color: #fff;
     margin-bottom: 3vh  
+}
+
+.about a {
+    background-color: #000;
+    color: #fff;
+    padding: 0vh 0.5vw;
+    border-radius: 20px;
+    opacity: 70%;
+}
+
+.about a:hover{
+    opacity: 90%;
+    color: #D36135;
+    /* link colour option #7CAE7A */
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    color: #fff;
+    font-family: Playfair Display, serif;
+    font-size: 2em;
+}
+
+.photo img{
+    height: 20vh;
+    border-radius: 50%;
+}
+
+table img {
+    height: 5vh;
 }
