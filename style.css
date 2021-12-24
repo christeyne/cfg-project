@@ -35,6 +35,7 @@ nav ul {
 nav ul li {
     list-style: none;
     margin-left: 20px;
+    height: 6vh;
 }
 
 nav ul li a:hover {
